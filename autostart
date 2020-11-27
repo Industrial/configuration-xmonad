@@ -1,0 +1,3 @@
+#!/usr/bin/env fish
+system-xorg-start
+tmux-code9

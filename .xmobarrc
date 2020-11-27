@@ -1,0 +1,32 @@
+Config {
+  font = "xft:Terminess Powerline:style=Bold:size=12",
+
+  bgColor = "#000000",
+  fgColor = "#ffffff",
+
+  allDesktops = True,
+  lowerOnStart = False,
+  overrideRedirect = False,
+  hideOnStart = False,
+  persistent = True,
+
+  position = Static {
+    xpos = 0,
+    ypos = 0,
+    width = 1920,
+    height = 16
+  },
+
+  commands = [
+    Run Cpu ["-L", "3", "-H", "50", "--normal", "green", "--high", "red"] 10,
+    Run Network "enp4s0" ["-L", "0", "-H", "70", "--normal", "green", "--high", "red"] 10,
+    Run Memory ["-t", "Mem: <usedratio>%"] 10,
+    Run Date "%H:%M:%S %Y-%m-%d" "date" 10,
+    Run Battery ["-L","49","-H","75","--high","green","--normal","yellow","--low","red"] 20,
+    Run StdinReader
+  ],
+
+  sepChar = "%",
+  alignSep = "}{",
+  template = " %StdinReader%}{ %cpu% | %memory% | Net: %enp4s0% | %battery% | %date% "
+}
