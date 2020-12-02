@@ -29,20 +29,20 @@ main = do
 
 myStartupHook = do
   spawn "~/.xmonad/autostart"
-  spawnOn "Q:Browser" "chromium-browser --new-window https://github.com"
-  spawnOn "W:Editor" "~/.bin/terminal"
-  spawnOn "E:Terminal" "~/.bin/terminal"
-  spawnOn "R:Git" "gitfiend"
-  spawnOn "T:Media" "spotify"
-  spawnOn "T:Media" "~/.bin/terminal -e sh -c \"tmux attach -t media\""
+  -- spawnOn "Q:Browser" "chromium-browser --new-window https://github.com"
+  -- spawnOn "W:Editor" "~/.bin/terminal"
+  -- spawnOn "E:Terminal" "~/.bin/terminal"
+  -- spawnOn "R:Git" "gitfiend"
+  -- spawnOn "T:Media" "spotify"
+  -- spawnOn "T:Media" "~/.bin/terminal -e sh -c \"tmux attach -t media\""
   -- spawnOn "Y:Social" "slack"
   -- spawnOn "Y:Social" "discord"
-  spawnOn "Y:Social" "~/.bin/terminal -e sh -c \"tmux attach -t social\""
-  spawnOn "I:System" "~/.bin/terminal -e sh -c \"tmux attach -t system\""
-  spawnOn "I:System" "xdman"
+  -- spawnOn "Y:Social" "~/.bin/terminal -e sh -c \"tmux attach -t social\""
+  -- spawnOn "I:System" "~/.bin/terminal -e sh -c \"tmux attach -t system\""
+  -- spawnOn "I:System" "xdman"
   -- spawnOn "U:Games" "lutris"
-  spawnOn "O:Office" "chromium-browser --new-window https://google.com"
-  spawnOn "P:Scratch" "~/.bin/terminal"
+  -- spawnOn "O:Office" "chromium-browser --new-window https://google.com"
+  -- spawnOn "P:Scratch" "~/.bin/terminal"
 
 myTheme = defaultTheme {
   activeColor       = "#336699",
